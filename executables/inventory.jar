@@ -1,0 +1,33 @@
+private static final String updateSellCmd = "UPDATESELL";
+	private static final String reportCmd = "REPORT";
+	private static final String updateSellPriceCmd = "UPDATESELLPRICE";
+	static {
+		System.gc();
+	}
+
+	public static void main(String[] args) {
+
+		// TODO Auto-generated method stub
+		try {
+			Scanner scanner = new Scanner(System.in);
+@@ -22,6 +26,10 @@ public static void main(String[] args) {
+				System.out.print("Enter command,'q' to quit :");
+				// Read User input value
+				lineText = scanner.nextLine();
+				if ("q".equalsIgnoreCase(lineText)) {
+					System.out.println("Exit!");
+					break;
+				}
+				String[] commands = lineText.split(" ");
+				String command = commands[0];
+				if (createCmd.equalsIgnoreCase(command)) {
+@@ -39,10 +47,6 @@ public static void main(String[] args) {
+				} else {
+					System.out.println("Invalid Command ");
+				}
+				if ("q".equals(lineText)) {
+					System.out.println("Exit!");
+					break;
+				}
+			}
+			scanner.close();
